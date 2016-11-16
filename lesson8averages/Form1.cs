@@ -19,19 +19,18 @@ namespace lesson8averages
 
         private void button1_Click(object sender, EventArgs e)
         {
-            //read values, add the values, divide by 2
-            //display the average back to user
-            //"10" can be converted to numerical form
-            //ten cannot be converted
+            //add values, divide by 2
+            //(2+5)/2
+            //first read the values, convert to numerical, produce average
+            //read text, convert to numerical form and save to the variables
             decimal firstValue = decimal.Parse(textBox1.Text);
             decimal secondValue = decimal.Parse(textBox2.Text);
-            //(firstValue+secondValue) runs first because it's enclosed in parenthesis
-            //so this forces the correct order of execution
-            //then the division by 2 happens
+            //average is called a computed variable
+            //operand operator operand
+            //first add the values, divide by 2, and save to average values
             decimal average = (firstValue + secondValue) / 2;
-            //:C has the effect of adding a dollar symbol in the output
-            //also has the effect of rounding the output to two decimal places
-            label1.Text = $"Average Salary={average:C}"; 
+            //:C has the effect of formatting average value as currency
+            label1.Text = $"Average Salary:{average:C}";
         }
     }
 }
